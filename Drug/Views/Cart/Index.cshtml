@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Drug.Models.CartInfo>
+
+@{
+    double totalCostSum = 0;
+}
+@using (Html.BeginForm("GenerateBill", "Cart", FormMethod.Post))
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DrugName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrugGenericName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpiryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DosageForm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </th>
+            <th>
+                Actions
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrugName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrugGenericName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+
+                <td>
+                        <span>&#8377;</span> @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DosageForm)
+                </td>               
+                <td>
+                        <span>&#8377;</span>  @Html.DisplayFor(modelItem => item.TotalCost)
+                </td>
+
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@item.CartId"><span class="fa fa-trash"></span></a>
+                    </td>
+                @{
+                    totalCostSum += item.TotalCost;
+                }
+            </tr>   
+            
+        }
+    </tbody>
+</table>
+    <div class="generate_bill_container_fixed">
+        <strong class="me-5">Total Cost Sum: <span id="totalCostSum" class="display-6"><span>&#8377;</span>@totalCostSum</span> </strong>
+        <button type="submit" class="generate_bill_button">Generate Bill</button>
+    </div>
+}

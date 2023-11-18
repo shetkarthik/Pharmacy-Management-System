@@ -1,0 +1,142 @@
+﻿.text_format {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-right: 20px;  
+}
+
+
+    .text_format:hover {
+        border-bottom:2px solid;
+    }
+
+
+.home_coverimage {
+    height: 50vh;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
+.home_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+}
+
+.home_buttons {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.create_icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 40px;
+  
+}
+
+
+
+.home_logo {
+    border: 1px solid;
+    padding: 23px 30px;
+    border-radius: 50%;
+
+}
+
+.card_styling {
+    width: 100%;
+    transform: scale(0.83);
+    height: 100%;
+    border: 1px solid;
+}
+
+.card_overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.card_image {
+    height: 250px;
+    transform:scale(0.9);
+}
+
+.submit_button {
+    font-size: 23px;
+    padding: 10px;
+    background:transparent;
+    width: 50%;
+}
+.generate_bill_container {
+    text-align: end;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.generate_bill_container_fixed {
+    text-align: end;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* You can adjust the background color as needed */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Add a border at the top for separation */
+}
+
+.footer_style {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* You can adjust the background color as needed */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Add a border at the top for separation */
+}
+
+.generate_bill_button {
+    width: 25%;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+
+}
+
+.letter_spaced {
+    letter-spacing: 4px;
+}
+
+.cart_empty_image {
+    display: block;
+    margin: auto;
+    height: 60vh;
+}
+
+
+

@@ -1,0 +1,47 @@
+﻿@using Drug.Models;
+@model IEnumerable<Drug.Models.BillingTable>
+
+
+<div class="billing_container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BillingId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DrugIds)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantities)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalCost)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BillingId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DrugIds)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantities)
+                    </td>
+
+                    <td>
+                        <span>&#8377;</span>  @Html.DisplayFor(modelItem => item.TotalCost)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
